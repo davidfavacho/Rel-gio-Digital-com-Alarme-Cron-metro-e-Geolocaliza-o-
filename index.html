@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital Animado</title>
+    <!-- Importando fontes do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="clock" id="clock">
+            <span id="time">00:00:00</span>
+            <p id="date"></p>
+            <p id="gps-info" class="gps-info">Localização: Carregando...</p>
+        </div>
+
+        <!-- Controles para o alarme e cronômetro -->
+        <div class="controls">
+            <div>
+                <label for="alarm-time">Defina o horário do alarme:</label><p></p>
+                <input type="time" id="alarm-time">
+                <button onclick="setAlarm()">Definir Alarme</button>
+                <p id="alarm-message" style="color: #ff6347;"></p>
+                <button class="deactivate-alarm" onclick="deactivateAlarm()">Desativar Alarme</button>
+            </div>
+
+            <div>
+                <label for="chrono-time">Cronômetro:</label>
+                <div class="chrono-controls">
+                    <button onclick="startStopChrono()">Iniciar/Pausar</button>
+                    <button onclick="resetChrono()">Resetar</button>
+                </div>
+                <p id="chrono-display">00:00:00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Música do alarme -->
+    <audio id="alarm-sound" src="hip-hop-news-271179.mp3" preload="auto"></audio>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
